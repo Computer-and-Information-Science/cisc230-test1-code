@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "g++: Compile/link active file",
+             "command": "g++ -c -g -o ${fileBasenameNoExtension}.o ${fileBasename}; g++ -g ${fileBasenameNoExtension}.o; rm ${fileBasenameNoExtension}.o",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": {
+                "pattern": { "regexp": "error" }
+            },
+            "group": {
+                "isDefault": true,
+                "kind": "build"
+            }
+        }
+    ]
+}
